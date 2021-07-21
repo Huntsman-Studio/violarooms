@@ -1,0 +1,42 @@
+/* Body */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #A2A4D2;
+    text-align: center;
+}
+
+img{
+    margin-top: 24px;
+    width: 40%;
+}
+
+h1{
+    font-size: 60px;
+    color: #f8f8f8;
+}
+
+table#contact{
+    justify-self: center;
+    border: none;
+    text-align: left;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+table#contact td{
+    color: #f8f8f8;
+    padding-top: 16px;
+}
+
+
+table#contact td a{
+    color: #f8f8f8;
+    text-decoration: none;
+}
+table#contact td a:hover{
+    text-decoration: underline;
+}
