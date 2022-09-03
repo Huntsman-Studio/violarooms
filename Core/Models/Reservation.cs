@@ -9,7 +9,7 @@ public class Reservation : Base
     public Payment Payment { get; set; }
     public ReservationFrom ReservationFrom  { get; set; }
     public int ReservationStatus { get; set; } // 1 = Confirmed | 0 = NotConfirmed
-    public DateTime ReservationStrat { get; set; }
+    public DateTime ReservationStart { get; set; }
     public DateTime ReservationEnd { get; set; }
     public float PricePerNight { get; set; }
     public float TotalPrice { get; set; }

@@ -8,6 +8,7 @@ public class Customer : Base
     public string IdNumber { get; set; }
     public string Country { get; set; }
     public Rating Rating { get; set; }
+    public ICollection<Reservation> Reservations { get; set; }
 }
 
 public enum Rating 
