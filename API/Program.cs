@@ -1,4 +1,6 @@
 using API.Extensions;
+using Core.Interfaces;
+using Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddSwaggerGen();
 
 // DB Connection
 builder.Services.AddDbConnection(builder.Configuration);
+
+// Interfaces
+builder.Services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
 
 var app = builder.Build();
 

@@ -25,4 +25,25 @@ public class Customers : BaseApiController
     {
         return Ok(await _customerRepo.GetByIdAsync(id));
     }
+
+    // AddCustomer
+    [HttpPost("add")]
+    public async Task<ActionResult<Customer>> AddCustomer(Customer customer)
+    {
+        return Ok(await _customerRepo.Add(customer));
+    }
+
+    // UpdateCustomer
+    [HttpPut("update")]
+    public async Task<ActionResult<Customer>> UpdateCustomer(Customer customer)
+    {
+        return Ok(await _customerRepo.Update(customer));
+    }
+
+    // DeleteCustomer
+    [HttpDelete("delete/{id}")]
+    public async Task<ActionResult<Customer>> DeleteCustomer(int id)
+    {
+        return Ok(await _customerRepo.Delete(id));
+    }
 }
