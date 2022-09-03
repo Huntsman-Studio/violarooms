@@ -1,1 +1,24 @@
+# dotnet
+obj
+bin
+
+# db
+*.db-shm
+*.db-wal
+*.db
+
+# Migrations
+Migrations/
+
+# appsetiings
+API/appsettings.json
+
+# def data
+DefaultData/
+
+# Client && Dashboard
+dist/
+img/
+
+# Images
 *.svg
