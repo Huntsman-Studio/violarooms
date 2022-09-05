@@ -22,3 +22,6 @@ img/
 
 # Images
 *.svg
+
+# Default User
+Infrastructure/Data/defaultUser.json
