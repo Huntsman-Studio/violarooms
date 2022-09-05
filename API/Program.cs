@@ -27,12 +27,12 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
 
-await using (var scope = app.Services.CreateAsyncScope())
+using (var scope = app.Services.CreateScope())
 {
 
     var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
-    await db.Database.MigrateAsync();
+    db.Database.Migrate();
     await Seed.SeedUsers(userManager);
     
 }

@@ -11,7 +11,7 @@ public class Seed
     {
         if (await userManager.Users.AnyAsync()) return;
 
-        var userData = await System.IO.File.ReadAllTextAsync("defaultUser.json");
+        var userData = await System.IO.File.ReadAllTextAsync("../Infrastructure/Data/defaultUser.json");
         var users = JsonSerializer.Deserialize<List<User>>(userData);
         
         if (users is null) return;
@@ -21,7 +21,7 @@ public class Seed
             user.UserName = user.Email.ToLower();
             user.Email = user.Email.ToLower();
 
-            await userManager.CreateAsync(user, "12345678");
+            await userManager.CreateAsync(user, "");
 
             // await userManager.AddToRoleAsync(user, "Admin");
         }
