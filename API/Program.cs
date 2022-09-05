@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Services;
 using Core.Interfaces;
 using Infrastructure.Data;
 
@@ -16,6 +17,7 @@ builder.Services.AddDbConnection(builder.Configuration);
 
 // Interfaces
 builder.Services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
 
