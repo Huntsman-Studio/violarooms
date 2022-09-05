@@ -27,14 +27,13 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
 
+// Default Data on Program Build
 using (var scope = app.Services.CreateScope())
 {
-
     var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
     db.Database.Migrate();
     await Seed.SeedUsers(userManager);
-    
 }
 
 // Configure the HTTP request pipeline.
