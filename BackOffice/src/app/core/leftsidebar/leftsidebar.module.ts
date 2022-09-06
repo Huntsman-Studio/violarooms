@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeftsidebarComponent } from './leftsidebar.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { LeftsidebarComponent } from './leftsidebar.component';
     LeftsidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     LeftsidebarComponent
